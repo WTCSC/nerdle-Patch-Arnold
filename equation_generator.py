@@ -9,12 +9,18 @@ For example: 12+34=46 or 8*7=56
 ########################################
 # TODO: Import the appropriate modules #
 ########################################
-
+import random 
 ###########################################
 # TODO: Implement the following functions #
 ###########################################
 
 def generate_numbers_for_addition():
+    while True:
+        num2 = random.randint(10, 99)
+        num1 = random.randint(10, 99)
+        result = num1 + num2
+        if 10 <= result <= 99:
+            return num1, num2, result
     """
     Generate two numbers that when added create an 8-character equation.
     Returns a tuple of (num1, num2, result)
@@ -26,6 +32,12 @@ def generate_numbers_for_addition():
     """
 
 def generate_numbers_for_subtraction():
+    while True:
+        num2 = random.randint(10, 99)
+        num1 = random.randint(10,99)
+        result = num1 - num2
+        if 10 <= result <= 99:
+            return num1, num2, result
     """
     Generate two numbers that when subtracted create an 8-character equation.
     Returns a tuple of (num1, num2, result)
@@ -37,6 +49,12 @@ def generate_numbers_for_subtraction():
     """
 
 def generate_numbers_for_multiplication():
+    while True:
+        num2 = random.randint(10, 99)
+        num1 = random.randint(1,9)
+        result = num1 * num2
+        if 100 <= result <= 999:
+            return num1, num2, result
     """
     Generate two numbers that when multiplied create an 8-character equation.
     Returns a tuple of (num1, num2, result)
@@ -49,6 +67,12 @@ def generate_numbers_for_multiplication():
     """
 
 def generate_numbers_for_division():
+    while True:
+        num2 = random.randint(10, 99)
+        result = random.randint(1,9)
+        num1 = num2 * result
+        if 100 <= num1 <= 999:
+            return num1, num2, result
     """
     Generate two numbers that when divided create an 8-character equation.
     Returns a tuple of (num1, num2, result)
